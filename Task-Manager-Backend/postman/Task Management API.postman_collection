@@ -1,0 +1,257 @@
+{
+	"info": {
+		"_postman_id": "871faced-44d3-42f0-8956-21a37ee37d2d",
+		"name": "Task Management API Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50005968",
+		"_collection_link": "https://ankurrahate681-380368.postman.co/workspace/ankur's-Workspace~76cdd666-0fff-498f-8253-91cbc3757b33/collection/50005968-871faced-44d3-42f0-8956-21a37ee37d2d?action=share&source=collection_link&creator=50005968"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"name\": \"Gauri Rahate\",\r\n    \"email\":\"gauri01@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const response = pm.response.json();\r",
+									"pm.environment.set(\"token\", response.accessToken);"
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gauri01@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjdkY2NmYTAzZjVhNDY4OTJhNThjNyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY4NDE0NDE1fQ.HNnUh_nyYT2pQdURztaxAFf4jNuN4V3HY4uQfAPhLYs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/users/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjdkY2NmYTAzZjVhNDY4OTJhNThjNyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY4NDE0NDE1fQ.HNnUh_nyYT2pQdURztaxAFf4jNuN4V3HY4uQfAPhLYs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Prepare Project README\",\r\n    \"description\": \"Write a clear and professional README file explaining project setup, API usage, and architecture decisions.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get My Task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjdkY2NmYTAzZjVhNDY4OTJhNThjNyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY4NDE0NDE1fQ.HNnUh_nyYT2pQdURztaxAFf4jNuN4V3HY4uQfAPhLYs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjdjYjI5ODIxMDJkNzM0YWE0MDY2MiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzY4NDA5OTMzLCJleHAiOjE3NjkwMTQ3MzN9.p8nOBtCItRgZCAgAGXiYLl1ekDCuy4QDEbCidFBorZ4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/6967ce6882102d734aa40666",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"6967ce6882102d734aa40666"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task (\"admin\") only",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5NjdkNzM0YTAzZjVhNDY4OTJhNThiMSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2ODQxMjk4MH0.5_5DHuIJZ2sDl1c2AtNRz7VjV13k4TIQdatxD5tzucs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"completed\"\r\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/tasks/6967ce6882102d734aa40666",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"6967ce6882102d734aa40666"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
