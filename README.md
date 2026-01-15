@@ -25,35 +25,45 @@ A **Node.js + Express + MongoDB** based backend application for managing tasks w
 
 ## 📁 Project Structure
 
-#### task-manager-backend/
-#### │
-#### ├── src/
-#### │ │
-#### │ ├── config/
-#### │ │ └── config.js
-#### │ │
-#### │ ├── middlewares/
-#### │ │ ├── authMiddleware.js
-#### │ │ ├── roleMiddleware.js
-#### │ │ └── globalErrorHandler.js
-#### │ │
-#### │ ├── users/
-#### │ │ ├── usermodel.js
-#### │ │ ├── usercontroller.js
-#### │ │ └── userrouter.js
-#### │ │
-#### │ ├── Task/
-#### │ │ ├── taskModel.js
-#### │ │ ├── taskController.js
-#### │ │ └── taskRouter.js
-#### │ │
-#### │ ├── app.js
-#### │ └── server.js
-#### │
-#### ├── .env
-#### ├── .gitignore
-#### ├── package.json
-#### └── README.md
+##### task-manager-backend/
+##### │
+##### ├── src/
+##### │ ├── config/
+##### │ │ └── config.js
+##### │ │
+##### │ ├── middlewares/
+##### │ │ ├── authMiddleware.js
+##### │ │ ├── roleMiddleware.js
+##### │ │ └── globalErrorHandler.js
+##### │ │
+##### │ ├── users/
+##### │ │ ├── usermodel.js
+##### │ │ ├── usercontroller.js
+##### │ │ └── userrouter.js
+##### │ │
+##### │ ├── Task/
+##### │ │ ├── taskModel.js
+##### │ │ ├── taskController.js
+##### │ │ └── taskRouter.js
+##### │ │
+##### │ ├── screenshots/
+##### │ │ ├── login.png
+##### │ │ ├── get-profile.png
+##### │ │ ├── create-task.png
+##### │ │ ├── get-tasks.png
+##### │ │ └── admin-delete-task.png
+##### │ │
+##### │ ├── app.js
+##### │ └── server.js
+##### │
+##### ├── postman/
+##### │ └── Task-Manager-API.postman_collection.json
+##### │
+##### ├── .env
+##### ├── .gitignore
+##### ├── package.json
+##### ├── package-lock.json
+##### └── README.md
 
 ## 🔐 Authentication Flow
 
@@ -94,3 +104,20 @@ A **Node.js + Express + MongoDB** based backend application for managing tasks w
 ##### npm install
 ##### Start server
 ##### npm run dev
+
+## 📸 API Screenshots
+
+### Login
+![Login API](screenshots/login.png)
+
+### Get Profile
+![Get Profile API](src/screenshots/get-profile.png)
+
+### Create Task
+![Create Task API](src/screenshots/create-task.png)
+
+### Get Tasks
+![Get Tasks API](src/screenshots/get-tasks.png)
+
+### Admin Delete Task
+![Admin Delete Task API](src/screenshots/admin-delete-task.png)
