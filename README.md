@@ -108,16 +108,16 @@ A **Node.js + Express + MongoDB** based backend application for managing tasks w
 ## 📸 API Screenshots
 
 ### Login
-![Login API](screenshots/login.png)
+![Login API](Task-Manager-Backend/src/screenshots/login.png)
 
 ### Get Profile
-![Get Profile API](src/screenshots/get-profile.png)
+![Get Profile API](Task-Manager-Backend/src/screenshots/get-profile.png)
 
 ### Create Task
-![Create Task API](src/screenshots/create-task.png)
+![Create Task API](Task-Manager-Backend/src/screenshots/create-task.png)
 
 ### Get Tasks
-![Get Tasks API](src/screenshots/get-tasks.png)
+![Get Tasks API](Task-Manager-Backend/src/screenshots/get-tasks.png)
 
 ### Admin Delete Task
-![Admin Delete Task API](src/screenshots/admin-delete-task.png)
+![Admin Delete Task API](Task-Manager-Backend/src/screenshots/admin-delete-task.png)
